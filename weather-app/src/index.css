@@ -1,0 +1,113 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+background-color: rgb(173, 216, 230);
+max-height: 100vh;
+}
+
+#cityContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#cityContainer button{
+  border-radius: 25px;
+  padding: 4px 7px;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  margin-left: 7.5px;
+  background-color: rgb(115, 211, 243) ;
+}
+
+#cityInput{
+  border-radius: 25px;
+  padding: 10px;
+  width: 35%;
+  outline: none;
+  border: none;
+}
+
+#forecastDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#mainForecastBox{
+  width: 670px;
+  height: 400px;
+  background-color: #ffffff;
+  opacity: 0.6;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-top: 0px;
+  border-radius: 15px;
+}
+
+#forecastIcon, #forecastDetails{
+  background-color: white;
+  margin-top: 30px;
+  width: 300px;
+  display: flex;
+  height: 350px;
+}
+
+#forecastDetails > div{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#forecastIcon{
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+#forecastIcon img{
+  height: 70%;
+  max-height: 70%;
+}
+
+#forecastDetails{
+  flex-direction: column;
+  justify-content: center;
+}
+
+#subForecastDiv{
+  display: flex;
+  gap: 15px;
+  margin-top: -60px;
+}
+
+#subForecastDiv img{
+  max-width: 100%;
+  height: 45px;
+}
+
+.sub-forecast-box{
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  opacity: 0.6;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}

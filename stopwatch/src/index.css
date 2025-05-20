@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+body{
+  background-color: black;
+  color: white;
+}
+
+#container{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#timerContainer h1{
+  font-size: 100px;
+}
+
+#buttonRow{
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+button{
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+button#resetLapButton{
+  background-color: red;
+}
+
+button#startStopButton{
+  background-color: green;
+}

@@ -1,0 +1,253 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%)
+}
+
+body{
+  background-color: var(--light-grayish-blue);
+  font-size: 13px;
+  font-family: 'Manrope';
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+main{
+  padding: 1.5rem;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.card{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.7rem;
+}
+
+.card .img__container{
+  height: 52vw;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+}
+
+.card .img__container img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+}
+
+.card__body{
+  /* padding: 1.5rem 2rem; */
+}
+
+.card__content{
+  padding: 1.5rem 2rem;
+}
+
+.card__body h4{
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+.card__body p{
+  margin-top: 1rem;
+  line-height: 1.3rem;
+  font-weight: 500;
+  padding-right: 0.45rem;
+  color: grey;
+  font-weight: 1rem;
+}
+
+.card__footer{
+  display: flex;
+  align-items: center;
+  border-bottom-left-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+  /* padding: 1rem 1.5rem; */
+  padding: 1rem 2rem;
+}
+
+.card__footer__share{
+  background-color: var(--very-dark-grayish-blue);
+  display: none;
+  color: white;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom-left-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+}
+
+.card__footer__share #icons{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+.card__footer__share #icons img{
+  scale: 0.95;
+}
+
+.card__footer__share h5{
+  font-weight: 100;
+  letter-spacing: 0.3rem;
+  font-size: 0.75rem;
+}
+
+.card__footer__share .share__container{
+  background-color: var(--desaturated-dark-blue);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.card__footer__share .share__container img{
+  margin-left: auto;
+  width: 1rem;
+  color: white
+}
+
+.card__footer .user-image__container{
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-image__container img{
+  object-fit: cover;
+}
+
+.name__date{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-left: 1rem;
+}
+
+.name__date #name{
+  font-weight: 700;
+}
+
+.name__date #date{
+  color: grey
+}
+
+.share__container{
+  background-color: var(--light-grayish-blue);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.share__container img{
+  width: 1rem;
+}
+
+.card__footer .share__tooltip{
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  .card{
+    flex-direction: row;
+    max-height: 40vw;
+  }
+
+  .card .img__container{
+    /* max-height: 30vw; */
+    height: auto;
+    width: 100%;
+    border-top-left-radius: 0.7rem;
+  }
+
+  .card .img__container img{
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.7rem;
+    height: 100%;
+  }
+
+  .card__content{
+    padding: 1rem 2rem;
+  }
+
+  .card__footer{
+    margin-top: auto;
+    padding-bottom: 1rem;
+  }
+
+  .card__footer .share__tooltip{
+    display: flex;
+    background-color: var(--very-dark-grayish-blue);
+    position: absolute;
+    top: -4.2rem;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+    color: white;
+    z-index: 1;
+  }
+
+  .card__footer .share__tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -1.8rem;
+    left: 50%;
+    margin-left: -1.1rem;
+    border-width: 1.2rem;
+    border-style: solid;
+    border-color: var(--very-dark-grayish-blue) transparent transparent transparent;
+}
+
+  .card__footer .share__tooltip #icons{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .card__footer .share__tooltip #icons img{
+    scale: 0.75;
+  }
+
+  .card__footer .share__tooltip h5{
+    font-weight: 100;
+    letter-spacing: 0.4rem;
+    font-size: 0.5rem;
+  }
+
+  .card__footer .share__container.active{
+    position: relative;
+    background-color: var(--very-dark-grayish-blue);
+  }
+ 
+  .card__footer__share{
+    display: none;
+  }
+
+  .card__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+}

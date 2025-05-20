@@ -1,0 +1,153 @@
+:root{
+  --red: hsl(4, 100%, 67%);
+  --blue-800: hsl(234, 29%, 20%);
+  --blue-700: hsl(235, 18%, 26%);
+  --grey: hsl(0, 0%,58%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Roboto";
+}
+
+/* Subscription Page */
+
+#container{
+  display: flex;
+  flex-direction: column;
+}
+
+#container img{
+  width: 100%;
+}
+
+.content-body{
+  padding: 2.5rem 2rem;
+}
+
+.content-body h1{
+  font-size: 2.55rem;
+  margin-bottom: 1.5rem;
+}
+
+.content-body p{
+  line-height: 1.7rem;
+  font-size: 16px;
+  padding-right: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+li{
+  padding-left: calc(22px + 1rem);
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  background-image: url('./assets/images/icon-list.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+form > div{
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.7rem;
+}
+
+form #errorMessage{
+  color: red;
+  font-size: 0.85rem;
+}
+
+label{
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+input{
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  outline: 1px solid var(--grey)
+}
+
+input.error{
+  border: 1px solid var(--red);
+  color: var(--red);
+}
+
+input::placeholder{
+  font-size: 1rem;
+}
+
+button{
+  padding: 1.2rem 1.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--blue-800);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+  text-rendering: optimizeLegibility;
+}
+
+/* Success Message */
+
+#successContainer{
+  display: none;
+  flex-direction: column;
+  padding: 6rem 1.5rem 2.5rem;
+  height: 100vh;
+  background-color: var(--white);
+}
+
+#successContainer img{
+  width: 4rem;
+  margin-bottom: 2.5rem;
+}
+
+#successContainer h1{
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+#successContainer p{
+  line-height: 1.4;
+  font-size: clamp(1rem calc(1rem + 0.1vw) 2.5rem);
+}
+
+#successContainer button{
+  margin-top: auto;
+}
